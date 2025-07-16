@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
 app.post("/posts", (req, res) => {
   // 6. /posts로 요청이 오면 실행
   const { title, name, text } = req.body; // 7. http 요청의 body 데이터를 변수에 할당
-
+  console.log(title);
   // 8. 게시글 리스트에 새로운 게시글 정보 추가
   posts.push({ id: posts.length + 1, title, name, text, createdDt: Date() });
   res.json({ title, name, text });
